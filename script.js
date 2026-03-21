@@ -7,10 +7,10 @@ const html = document.documentElement;
 const savedTheme = localStorage.getItem('theme') || 'light';
 if (savedTheme === 'dark') {
     html.classList.add('dark');
-    themeIcon.src = 'btn_moon2.png';
+    themeIcon.src = 'assets/btn_moon2.png';
 } else {
     html.classList.remove('dark');
-    themeIcon.src = 'btn_sun2.png';
+    themeIcon.src = 'assets/btn_sun2.png';
 }
 
 // Toggle theme
@@ -18,7 +18,7 @@ themeToggle.addEventListener('click', () => {
     if (html.classList.contains('dark')) {
         html.classList.remove('dark');
         localStorage.setItem('theme', 'light');
-        themeIcon.src = 'btn_sun2.png';
+        themeIcon.src = 'assets/btn_sun2.png';
         themeIcon.alt = 'Modo oscuro';
     } else {
         html.classList.add('dark');
@@ -37,7 +37,7 @@ let isPlaying = false;
 musicToggle.addEventListener('click', () => {
     if (isPlaying) {
         audioPlayer.pause();
-        musicIcon.src = 'btn_pause.png';
+        musicIcon.src = 'assets/btn_pause.png';
         musicIcon.alt = 'Pause';
     } else {
         audioPlayer.play();
