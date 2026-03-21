@@ -23,7 +23,7 @@ themeToggle.addEventListener('click', () => {
     } else {
         html.classList.add('dark');
         localStorage.setItem('theme', 'dark');
-        themeIcon.src = 'btn_moon2.png';
+        themeIcon.src = 'assets/btn_moon2.png';
         themeIcon.alt = 'Modo claro';
     }
 });
@@ -41,7 +41,7 @@ musicToggle.addEventListener('click', () => {
         musicIcon.alt = 'Pause';
     } else {
         audioPlayer.play();
-        musicIcon.src = 'btn_play.png';
+        musicIcon.src = 'assets/btn_play.png';
         musicIcon.alt = 'Play';
     }
     isPlaying = !isPlaying;
