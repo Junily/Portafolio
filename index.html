@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio - Javiera Marchant</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración de Tailwind personalizada -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'rgb(250, 250, 251)',
+                        secondary: 'rgb(31, 36, 46)',
+                        'secondary-hover': 'rgb(46, 52, 64)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="root" class="min-h-screen bg-primary dark:bg-secondary border border-gray-700 rounded-lg shadow-lg">
+        
+        <!-- Header -->
+        <header class="max-w-4xl mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 mr-4">
+                        <img src="assets/logo.png" alt="Logo">
+                    </div>
+                    <h1 class="text-xl font-bold text-black dark:text-white">
+                        Mi Portafolio
+                    </h1>
+                </div>
+                <nav class="flex gap-6">
+                    <!-- Music Player -->
+                    <button id="musicToggle" class="focus:outline-none">
+                        <img id="musicIcon" src="assets/btn_pause.png" alt="Music" class="h-20 w-20">
+                    </button>
+                    <audio id="audioPlayer" src="assets/music.mp3"></audio>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="themeToggle" class="focus:outline-none">
+                        <img id="themeIcon" src="assets/btn_sun2.png" alt="Theme" class="h-20 w-20">
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="max-w-4xl mx-auto px-4 py-12">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="w-48 h-48">
+                    <img class="w-48 h-48 rounded-full border-4 border-cyan-400" src="assets/dev.png" alt="Javiera Marchant">
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-300">
+                        Hola, soy <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Javiera Marchant</span> 👋
+                    </h2>
+                    <p class="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+                        Desarrolladora FullStack apasionada por crear experiencias digitales increíbles.
+                        Especializada en React, Tailwind CSS y desarrollo frontend moderno.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="max-w-4xl mx-auto px-4 py-12">
+            
+            <!-- Project 1 -->
+            <div class="max-w-4xl mx-auto my-8 bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex transform transition duration-300 hover:scale-105 dark:bg-secondary-hover">
+                <div class="w-1/2">
+                    <a href="https://vm-w6diy22y53201fpsg6qkx9.vusercontent.net/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/salones-elegantes.png" alt="Proyecto Salones elegantes" class="w-full h-full object-cover">
+                    </a>
+                </div>
+                <div class="w-1/2 p-6 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+                        Proyecto Salones elegantes
+                    </h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        Aplicación para gestión de reservas en salones. Construida con React, Tailwind y TypeScript.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="max-w-4xl mx-auto my-8 bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex transform transition duration-300 hover:scale-105 dark:bg-secondary-hover">
+                <div class="w-1/2">
+                    <a href="https://tranquil-mandazi-94d0ad.netlify.app/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/hana-pwa.png" alt="Proyecto Hana PWA" class="w-full h-full object-cover">
+                    </a>
+                </div>
+                <div class="w-1/2 p-6 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+                        Proyecto Hana PWA
+                    </h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        Aplicación PWA + Hana-AI. Construida con React, Tailwind y TypeScript.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="max-w-4xl mx-auto my-8 bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex transform transition duration-300 hover:scale-105 dark:bg-secondary-hover">
+                <div class="w-1/2">
+                    <a href="https://preview--via-segura-shop.lovable.app/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/comercial-dlp.png" alt="Proyecto ComercialDLP" class="w-full h-full object-cover">
+                    </a>
+                </div>
+                <div class="w-1/2 p-6 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+                        Proyecto ComercialDLP
+                    </h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        Aplicación e-commerce para ComercialDLP. Construida con React, Tailwind y TypeScript.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Floating Button (opcional) -->
+        <div id="floatingContainer">
+            <button id="floatingBtn" class="fixed top-6 right-6 bg-slate-500 text-white rounded-full p-4 shadow-lg hover:bg-slate-600 transition">
+                <img src="assets/btn_down.png" alt="Menu">
+            </button>
+
+            <!-- Tarjeta desplegable -->
+            <div id="floatingCard" class="fixed top-24 right-6 bg-white dark:bg-gray-800 shadow-xl rounded-lg p-6 w-72 transition hidden">
+                <div class="space-y-2 font-bold text-gray-700 dark:text-gray-300">
+                    Redes sociales
+                </div>
+                <div class="flex gap-3 mt-6">
+                    <a title="Linkedin" href="https://www.linkedin.com/in/jbmp/" rel="noopener noreferrer" target="_blank" class="text-cyan-600 hover:text-cyan-400">
+                        <img src="assets/linkedin-icon.png" alt="LinkedIn">
+                    </a>
+                    <a title="Github" href="https://github.com/Junily" rel="noopener noreferrer" target="_blank" class="text-cyan-600 hover:text-cyan-400">
+                        <img src="assets/github-icon.png" alt="GitHub">
+                    </a>
+                    <a title="Twitter" href="https://x.com/OMGbely" rel="noopener noreferrer" target="_blank" class="text-cyan-600 hover:text-cyan-400">
+                        <img src="assets/x-icon.png" alt="Twitter">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="max-w-4xl mx-auto px-4 py-6 mt-12 border-t border-gray-700">
+            <p class="text-sm text-gray-400 text-center">
+                © 2026 Mi Portafolio. Hecho con ❤️ usando React y Tailwind CSS.
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
